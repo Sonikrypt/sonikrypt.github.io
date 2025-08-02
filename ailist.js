@@ -16,7 +16,6 @@ const cateTool = [
       { name: "Socratic by Google", description: "AI-powered learning app for homework help.", url: "https://socratic.org/" },
       { name: "Elicit", description: "AI research assistant to find and synthesize information.", url: "https://elicit.org/" },
       { name: "Monica AI", description: "Your everyday AI assistant in your browser.", url: "https://monica.im/" },
-      { name: "Tome", description: "AI-powered storytelling format.", url: "https://tome.app/" },
       { name: "Andi Search", description: "Generative AI search engine that answers questions directly.", url: "https://andisearch.com/" },
       { name: "Phind", description: "AI search engine for developers.", url: "https://www.phind.com/" },
       { name: "Talk to Books by Google", description: "Explore ideas and discover books through conversation.", url: "https://books.google.com/talktobooks/" },
