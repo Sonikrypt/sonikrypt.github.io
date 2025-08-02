@@ -43,14 +43,12 @@ const cateTool = [
       { name: "Peppertype.ai", description: "AI content generator for various content types.", url: "https://www.peppertype.ai/" },
       { name: "QuillBot", description: "AI paraphrasing tool and grammar checker.", url: "https://quillbot.com/" },
       { name: "ShortlyAI", description: "AI writing tool to generate blog posts, articles, and more.", url: "https://www.shortlyai.com/" },
-      { name: "Articoolo", description: "AI article writer that generates unique content.", url: "https://articoolo.com/" },
       { name: "ClosersCopy", description: "AI copywriting software for sales and marketing.", url: "https://closerscopy.com/" },
       { name: "Frase.io", description: "AI content optimization and creation platform.", url: "https://www.frase.io/" },
       { name: "GrowthBar", description: "SEO content tool with AI writing features.", url: "https://www.growthbar.com/" },
       { name: "TextCortex AI", description: "Personalized AI writing assistant for every platform.", url: "https://textcortex.com/" },
       { name: "Simplified", description: "All-in-one AI platform for design, video, and writing.", url: "https://simplified.com/" },
       { name: "AI Writer", description: "Generates articles and blog posts from a headline.", url: "https://ai-writer.com/" },
-      { name: "InferKit", description: "AI text generation API for creative writing.", url: "https://inferkit.com/" },
       { name: "CopyMonkey", description: "AI for Amazon listings and product descriptions.", url: "https://copymonkey.ai/" },
       { name: "PostcardMania AI Copywriter", description: "AI tool for generating direct mail copy.", url: "https://www.postcardmania.com/ai-copywriter/" },
       { name: "Outranking", description: "AI-powered content creation and optimization platform.", url: "https://www.outranking.io/" },
@@ -72,8 +70,6 @@ const cateTool = [
       { name: "NightCafe", description: "Create, share, and explore AI-generated art.", url: "https://creator.nightcafe.studio/" },
       { name: "Stable Diffusion", description: "Open-source text-to-image diffusion model.", url: "https://stability.ai/stable-diffusion" },
       { name: "Artbreeder", description: "AI tool for creating new images by mixing and evolving existing ones.", url: "https://www.artbreeder.com/" },
-      { name: "DeepArt.io", description: "Transforms photos into art using styles of famous paintings.", url: "https://deepart.io/" },
-      { name: "RunDiffusion", description: "Cloud-based Stable Diffusion for fast image generation.", url: "https://rundiffusion.com/" },
       { name: "Lexica Art", description: "Search engine for Stable Diffusion images and prompts.", url: "https://lexica.art/" },
       { name: "PicFinder.AI", description: "Endless stream of AI-generated images from text.", url: "https://picfinder.ai/" },
       { name: "Bing Image Creator", description: "Create images from text with DALL-E 3 powered by Copilot.", url: "https://www.bing.com/images/create" },
@@ -123,10 +119,7 @@ const cateTool = [
       { name: "Lovo.ai", description: "AI voice generator and text-to-speech platform.", url: "https://www.lovo.ai/" },
       { name: "WellSaid Labs", description: "Create voiceovers using AI voices.", url: "https://www.wellsaidlabs.com/" },
       { name: "Resemble.ai", description: "AI voice cloning and generation platform.", url: "https://www.resemble.ai/" },
-      { name: "Amper Music", description: "AI music composer and generator.", url: "https://www.ampermusic.com/" },
-      { name: "Jukebox by OpenAI", description: "AI that generates music with singing.", url: "https://openai.com/blog/jukebox/" },
       { name: "Audiocraft by Meta", description: "Generative AI for audio and music from text.", url: "https://ai.meta.com/blog/audiocraft-generative-ai-audio-music-generation/" },
-      { name: "Splash Music", description: "AI music creation for games and media.", url: "https://www.splashmusic.com/" },
       { name: "NaturalReader", description: "Text to speech online with natural voices.", url: "https://www.naturalreaders.com/" },
       { name: "Play.ht", description: "AI voice generator and realistic text to speech.", url: "https://play.ht/" },
       { name: "Voicify AI", description: "AI voice creation for various applications.", url: "https://voicify.ai/" },
@@ -222,7 +215,6 @@ const cateTool = [
       { name: "Google Gemini (for code generation)", description: "Capable of generating and explaining code across languages.", url: "https://gemini.google.com/" },
       { name: "DeepCode.ai (now Snyk Code)", description: "AI static code analysis for security vulnerabilities.", url: "https://snyk.io/product/snyk-code/" },
       { name: "Mutable.ai", description: "AI for automated refactoring and code modernization.", url: "https://mutable.ai/" },
-      { name: "Kite (discontinued)", description: "AI code completion for Python, Java, and JavaScript (Note: Discontinued but influential).", url: "https://www.kite.com/" },
       { name: "CodeGPT", description: "AI for generating and refactoring code, available as IDE extensions.", url: "https://codegpt.co/" },
       { name: "Axiom.ai", description: "Browser automation with AI for web scraping and data entry.", url: "https://axiom.ai/" },
       { name: "Buildship", description: "AI for building backend APIs and workflows.", url: "https://www.buildship.com/" },
@@ -231,7 +223,8 @@ const cateTool = [
       { name: "Adalo", description: "No-code app builder with AI integrations.", url: "https://www.adalo.com/" },
       { name: "Bubble", description: "No-code platform to build web applications with AI plugins.", url: "https://bubble.io/" },
       { name: "Webflow AI", description: "AI features integrated into Webflow for web design and development.", url: "https://webflow.com/ai" },
-      { name: "Vercel AI SDK", description: "Tools for building AI-powered applications with Next.js.", url: "https://sdk.vercel.ai/" }
+      { name: "Vercel AI SDK", description: "Tools for building AI-powered applications with Next.js.", url: "https://sdk.vercel.ai/" },
+      { name: "Bolt AI", description: "AI-powered web app builder.", url: "https://bolt.new/" }
     ]
   }
 ];
