@@ -1,0 +1,923 @@
+/* usefultool-amazing.css - Amazing Version for SoniKrypt's Useful Websites */
+
+/* --- Base Styles --- */
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #0d0000, #1a0000, #100000);
+    color: #ffecec;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: url('assets/cursor.cur') 0 0, auto; /* Custom default cursor */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+/* Custom Scrollbar for a sleek look */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #0d0000;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+    border-radius: 20px;
+    border: 3px solid #0d0000;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #ff4d4d;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none; /* Ensure particles don't interfere with clicks */
+}
+
+h1, h2, h3 {
+    color: #fff5f5;
+    text-align: center;
+    margin: 0.3em 0;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.3); /* Subtle glow for all headings */
+}
+
+/* --- Top Bar and Title Styling --- */
+.top-bar {
+    width: 100%;
+    max-width: 1200px; /* Align with category section max-width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.top-bar h1 {
+    pointer-events: auto;
+    user-select: none;
+    font-size: 2.5em;
+    animation: slideFromTop 1s ease-out both;
+    text-shadow: 0 0 5px #ff555566, 0 0 10px #e419196f, 0 0 15px #ff00007e;
+}
+
+.top-bar h1 a {
+    color: inherit;
+    text-decoration: none;
+    cursor: url('assets/hand.cur'), pointer !important;
+}
+
+.top-bar h1 a:active {
+    cursor: url('assets/click.cur'), pointer !important;
+}
+
+/* Glowing title animation (main site title, not section title) */
+/* Assuming .glow-title is applied to the h1 element if it's the main site title */
+.glow-title a {
+    color: #ffffff;
+    font-size: 3.5rem; /* Slightly larger */
+    text-decoration: none;
+    text-shadow: 0 0 15px rgba(255, 77, 77, 0.7), 0 0 25px rgba(255, 26, 26, 0.9), 0 0 40px rgba(230, 0, 0, 0.8);
+    animation: pulseGlow 5s infinite ease-in-out alternate; /* Smoother, alternating pulse */
+    cursor: url('assets/hand.cur'), pointer;
+}
+
+.glow-title a:active {
+    cursor: url('assets/click.cur'), pointer;
+}
+
+@keyframes pulseGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 77, 77, 0.6), 0 0 20px rgba(255, 77, 77, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 25px rgba(255, 26, 26, 0.9), 0 0 40px rgba(230, 0, 0, 0.8), 0 0 60px rgba(230, 0, 0, 0.7);
+    }
+}
+
+/* Subtitle shine effect */
+.subtitle {
+    font-weight: bold;
+    background: linear-gradient(90deg, #fff, #ff9999, #fff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s linear infinite; /* Faster shine */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em; /* Adjusted size for the "USEFUL WEBSITES" subtitle */
+}
+
+@keyframes shine {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Glowing divider line below section title */
+.divider {
+    height: 4px;
+    width: 200px; /* Slightly wider */
+    margin: 15px auto 40px auto; /* More vertical spacing */
+    background: linear-gradient(to right, #ff4d4d, #ffcccc, #ff4d4d);
+    animation: glowLine 2.5s ease-in-out infinite alternate; /* Smoother, alternating glow */
+    border-radius: 2px;
+    box-shadow: 0 0 12px rgba(255, 77, 77, 0.6); /* Initial glow */
+}
+
+@keyframes glowLine {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 94, 94, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 25px #ff1a1a, 0 0 40px rgba(255, 0, 0, 0.4);
+    }
+}
+
+/* --- General Link Styling --- */
+a {
+    color: #ff4d4d;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #ffc1c1;
+    text-shadow: 0 0 8px #ff4d4d; /* More pronounced text shadow on hover */
+}
+
+#dynamic-content-area a {
+    cursor: url('assets/hand.cur'), pointer;
+}
+
+#dynamic-content-area a:active {
+    cursor: url('assets/click.cur'), pointer;
+}
+
+/* --- Section Titles (General) --- */
+/* This will apply to .section-title that are not specifically <summary> elements */
+.section-title {
+    font-size: 2.2em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #fff0f0;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.popular-tools-heading {
+    margin-top: 30px;
+}
+
+/* --- Search Box --- */
+.search-box-container {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 25px; /* More space from title/divider */
+    margin-bottom: 40px; /* More space before categories */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-box {
+    background: linear-gradient(145deg, #0c0000, #1a0000); /* Deeper gradient */
+    border-radius: 18px; /* Slightly more rounded */
+    padding: 20px 30px; /* More padding */
+    border: 4px solid #ff0000;
+    box-shadow: inset 0 0 20px rgba(255, 0, 0, 0), 0 0 25px rgba(255, 0, 0, 0); /* Stronger shadows */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* More gap */
+    align-items: stretch;
+    position: relative;
+}
+
+.search-box .row {
+    display: flex;
+    gap: 12px; /* Slightly more gap */
+    align-items: center;
+}
+
+.search-box input[type="text"] {
+    flex-grow: 1;
+    padding: 14px 18px; /* More padding */
+    border: none;
+    border-radius: 12px; /* Slightly more rounded */
+    background-color: #050000;
+    color: #ffecec;
+    font-size: 1.3em; /* Slightly larger font */
+    outline: none;
+    box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.3); /* Stronger inset shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box input[type="text"]::placeholder {
+    color: #ffc1c1b0; /* Slightly more opaque placeholder */
+}
+
+.search-box input[type="text"]:focus {
+    background-color: #0a0000;
+    box-shadow: inset 0 0 15px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 100, 100, 0.3); /* Added outer glow on focus */
+}
+
+.search-box button {
+    padding: 12px 22px; /* More padding */
+    border: none;
+    border-radius: 10px; /* Slightly more rounded */
+    background-color: rgba(255, 205, 205, 1); /* Stronger red background */
+    color: #fff; /* White text for contrast */
+    font-size: 1.5em; /* Larger icon/text */
+    cursor: url('assets/hand.cur'), pointer !important;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0); /* Stronger shadow */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Text shadow for icon */
+}
+
+.search-box button:hover {
+    background-color: rgba(255, 0, 0, 0.9); /* More intense red on hover */
+    transform: translateY(-5px) scale(1.05); /* More pronounced hover effect */
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 50, 50, 0.5); /* Enhanced glow */
+}
+
+.search-box button:active,
+.clear-button:active,
+.search-button:active {
+    cursor: url('assets/click.cur'), pointer !important;
+    transform: translateY(-2px) scale(0.98); /* Click effect */
+    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.8);
+}
+
+.search-box .clear-button {
+    background-color: rgba(255, 205, 205, 1); /* Darker red for clear button */
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(150, 0, 0, 0.33);
+}
+
+.search-box .clear-button:hover {
+    background-color: #a00000; /* Darker red hover */
+    box-shadow: 0 8px 25px rgba(180, 0, 0, 0.8);
+}
+
+/* --- Dropdown and Autocomplete --- */
+.dropdown {
+    position: absolute;
+    top: calc(100% + 15px); /* More space from input box */
+    left: 0;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    background-color: #150000;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3), inset 0 0 5px rgba(0, 0, 0, 0.5); /* Stronger shadows */
+    max-height: 250px; /* Taller dropdown */
+    overflow-y: auto;
+    border: 1px solid #ff4d4d; /* Subtle border */
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.dropdown li {
+    padding: 12px 20px; /* More padding */
+    cursor: url('assets/hand.cur'), pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    color: #ffecec;
+    font-size: 1.1em;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.1); /* Subtle divider */
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+}
+
+.dropdown li:hover {
+    background-color: rgba(255, 0, 0, 0.8); /* More intense red on hover */
+    transform: translateX(5px); /* Slide effect on hover */
+}
+
+.dropdown li:active,
+#suggestion-box li:active {
+    cursor: url('assets/click.cur'), pointer;
+}
+
+.dropdown li.selected,
+.autocomplete-active {
+    background-color: #ff0000; /* Solid red for selected */
+    color: #fff; /* White text for selected */
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+#suggestion-box li {
+    cursor: url('assets/hand.cur'), pointer;
+}
+
+.not-found-message {
+    text-align: center;
+    margin-top: 20px; /* More space */
+    font-size: 1.3em; /* Slightly larger */
+    color: #ff6666; /* Softer red */
+    font-weight: bold;
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px; /* More padding */
+    background-color: #2a0000; /* Darker background */
+    border-radius: 10px;
+    border: 2px solid #ff3333; /* Stronger border */
+    box-shadow: 0 0 10px rgba(255, 50, 50, 0.5); /* Glow for message */
+}
+
+.highlight {
+    font-weight: bold;
+    color: lime;
+}
+
+/* --- Category Sections (Collapsible with Details/Summary) --- */
+.ai-tools-section {
+    width: 100%;
+    max-width: 1200px; /* Consistent with top-bar */
+    margin-bottom: 50px;
+    animation: fadeIn 2s ease both;
+}
+
+details {
+    margin-bottom: 25px; /* Space between collapsible categories */
+    border: 2px solid rgba(255, 0, 0, 0.2);
+    border-radius: 12px;
+    background: linear-gradient(160deg, #100000, #080000); /* Subtle gradient for details background */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);
+}
+
+details[open] {
+    border-color: rgba(255, 0, 0, 0.5); /* Stronger border when open */
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+}
+
+summary.category-title {
+    display: flex; /* Use flexbox for arrow and text alignment */
+    align-items: center;
+    padding: 20px 25px; /* Ample padding */
+    font-size: 2.2rem; /* Consistent large size */
+    font-weight: bold;
+    color: #fff5f5;
+    cursor: url('assets/hand.cur'), pointer;
+    background: linear-gradient(90deg, #250000, #0f0000); /* Darker gradient for summary */
+    border-radius: 10px; /* Rounded corners for summary */
+    transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    user-select: none; /* Prevent text selection */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+summary.category-title:hover {
+    background: linear-gradient(90deg, #300000, #1a0000); /* Darker hover background */
+    color: #fff;
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+summary.category-title::marker {
+    display: none; /* Hide default arrow */
+}
+
+summary.category-title::before {
+    content: "▶"; /* Custom arrow */
+    display: inline-block;
+    margin-right: 15px; /* More space for the arrow */
+    font-size: 0.8em; /* Control arrow size */
+    color: #ff4d4d; /* Red color for arrow */
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: rotate(0deg);
+}
+
+details[open] > summary.category-title::before {
+    transform: rotate(90deg); /* Rotate arrow when open */
+    color: #ff9999; /* Lighter red when open */
+}
+
+/* --- Tool Cards --- */
+.card-container {
+    display: grid;
+    /* Changed to display 3 columns on larger screens */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px; /* Increased gap */
+    padding: 20px; /* Padding inside the details content area */
+    padding-top: 30px; /* More padding top from summary */
+}
+
+.tool-card {
+    background: linear-gradient(145deg, #1a0000, #050000); /* Deeper gradient */
+    border: 3px solid #4a0000;
+    border-radius: 12px; /* Slightly more rounded */
+    padding: 25px; /* More padding */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3), inset 0 0 12px rgba(0, 0, 0, 0.9); /* Stronger shadows */
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.6; /* More comfortable line height */
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 90px; /* Slightly taller cards */
+    text-decoration: none;
+    color: #ffecec;
+    cursor: url('assets/hand.cur'), pointer;
+}
+
+.tool-card:hover {
+    background: #80000080; /* More distinct red on hover */
+    border-color: #ff0000; /* Solid red border on hover */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1), inset 0 0 15px rgba(255, 0, 0, 0.2); /* Stronger glow */
+    transform: translateY(-10px) scale(1.02); /* More pronounced lift and slight scale */
+}
+
+.tool-card:active {
+    cursor: url('assets/click.cur'), pointer;
+    transform: translateY(-5px) scale(0.98);
+}
+
+.tool-card .card-title {
+    font-weight: bold;
+    color: #ffefef;
+    font-size: 1.4em; /* Slightly larger title */
+    margin-bottom: 10px; /* More space below title */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 0, 0, 0.2); /* Enhanced title shadow */
+}
+
+.tool-card .card-description {
+    color: #ffecec;
+    font-size: 1em;
+    text-shadow: none;
+    box-shadow: none !important;
+}
+
+.tool-card.highlighted-card {
+    border-color: #ffeb3bee;
+    box-shadow: 0 0 20px #ffeb3bb6, inset 0 0 10px #ffc107; /* Stronger yellow glow */
+    background: linear-gradient(145deg, #443c00, #2a2200); /* Darker yellow gradient */
+    animation: pulseYellow 1s infinite alternate;
+}
+
+@keyframes pulseYellow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px #ffeb3b, inset 0 0 10px #ffc107;
+    }
+    100% {
+        transform: scale(1.03); /* Slightly more pronounced pulse */
+        box-shadow: 0 0 35px #ffeb3b, inset 0 0 18px #ffc107;
+    }
+}
+
+/* --- Bottom Bar and Buttons --- */
+.bottom-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em; /* Increased gap */
+    width: 100%;
+    margin-top: 100px; /* More space from content */
+    margin-bottom: 60px; /* More space at the bottom */
+}
+
+
+.button-glow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Increased gap */
+    padding: 15px 30px; /* More padding */
+    border: 3px solid #ff4d4d; /* Thicker border */
+    border-radius: 15px; /* More rounded */
+    background-color: transparent;
+    color: #fff5f5;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: url('assets/hand.cur'), pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #ff4d4d, inset 0 0 10px #ff9999; /* Stronger initial glow */
+    font-size: 1.2em; /* Slightly larger font */
+    min-width: 250px; /* Wider buttons */
+}
+
+.button-glow:hover {
+    background: #ff4d4d;
+    color: #000000; /* Black text on hover for high contrast */
+    box-shadow: 0 0 25px #ff4d4d, inset 0 0 25px #ff4d4d; /* Stronger glow on hover */
+    transform: translateY(-8px) scale(1.03); /* More pronounced hover effect */
+}
+
+.button-glow:active {
+    cursor: url('assets/click.cur'), pointer;
+    transform: translateY(-3px) scale(0.98);
+}
+
+.button-glow img {
+    width: 28px; /* Larger icon */
+    height: 28px;
+    vertical-align: middle;
+}
+
+/* --- Hamburger Menu --- */
+.hamburger {
+    position: fixed;
+    top: 60px;
+    left: 30px;
+    width: 35px; /* Slightly larger */
+    height: 30px; /* Slightly larger */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: url('assets/hand.cur'), pointer;
+    z-index: 1001;
+}
+
+.hamburger:active {
+    cursor: url('assets/click.cur'), pointer;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 5px; /* Thicker lines */
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border-radius: 2px; /* Slightly rounded lines */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle glow for lines */
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translateY(12px); /* Adjusted for thicker lines */
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translateY(-12px); /* Adjusted for thicker lines */
+}
+
+/* Side Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -280px; /* Adjusted to hide better */
+    width: 270px; /* Wider menu */
+    height: 100vh;
+    background: linear-gradient(180deg, #180000, #0a0000); /* Darker, more intense gradient */
+    color: #fff;
+    padding-top: 120px; /* More space from top */
+    transition: left 0.4s ease;
+    z-index: 1000;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.8); /* Shadow on open edge */
+}
+
+.side-menu a {
+    display: block;
+    padding: 18px 30px; /* More padding */
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    border-bottom: 1px solid #3d0000; /* Stronger border */
+    transition: background 0.3s ease, color 0.3s ease;
+    font-size: 1.1em; /* Slightly larger font */
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+    cursor: url('assets/hand.cur'), pointer;
+}
+
+.side-menu a:hover {
+    background-color: #350000; /* Darker red on hover */
+    color: #ffcccc; /* Lighter text on hover */
+    padding-left: 35px; /* Indent on hover */
+}
+
+.side-menu a:active {
+    cursor: url('assets/click.cur'), pointer;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu a .coming-soon {
+    display: block;
+    font-size: 0.8em; /* Slightly smaller for 'coming soon' */
+    color: #ff8080; /* Brighter red */
+    margin-top: 5px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+
+/* --- Keyframe Animations (consolidated) --- */
+@keyframes slideFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+/* --- Media Queries --- */
+@media (max-width: 1200px) {
+    /* For screens between 1025px and 1200px, still aim for 3 columns but potentially smaller cards */
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Transition to 2 columns on screens 1024px and below */
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusted minmax for 2 columns */
+        gap: 25px; /* Slightly reduced gap */
+    }
+    .glow-title a {
+        font-size: 3rem;
+    }
+    .subtitle {
+        font-size: 1.6em;
+    }
+    summary.category-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px; /* Adjusted padding */
+    }
+
+    .glow-title a {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.4em;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    .search-box-container {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .search-box {
+        padding: 15px 20px;
+        border-radius: 15px;
+    }
+
+    .search-box input[type="text"] {
+        font-size: 1em;
+        padding: 10px 12px;
+    }
+
+    .search-box button {
+        font-size: 1.2em;
+        padding: 8px 15px;
+    }
+
+    summary.category-title {
+        font-size: 1.8rem;
+        padding: 15px 20px;
+    }
+
+    summary.category-title::before {
+        margin-right: 10px;
+    }
+
+    .card-container {
+        /* Maintain 2 columns on smaller tablets */
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 15px;
+        padding-top: 20px;
+    }
+
+    .tool-card {
+        padding: 20px;
+        min-height: 80px;
+    }
+
+    .tool-card .card-title {
+        font-size: 1.2em;
+    }
+
+    .bottom-bar {
+        margin-top: 60px;
+        margin-bottom: 30px;
+        gap: 1.5em;
+    }
+
+    .button-glow {
+        width: 90%;
+        max-width: 300px;
+        font-size: 1em;
+        padding: 10px 20px;
+        min-width: unset;
+    }
+
+    .button-glow img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .hamburger {
+        top: 30px;
+        left: 20px;
+        width: 30px;
+        height: 25px;
+    }
+
+    .hamburger div {
+        height: 4px;
+    }
+
+    .side-menu {
+        width: 220px;
+        padding-top: 80px;
+    }
+
+    .side-menu a {
+        padding: 15px 25px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-container {
+        /* Revert to 1 column on smaller mobile screens */
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+        padding-top: 15px;
+    }
+
+    .search-box .row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-box button {
+        width: 48%;
+    }
+
+    .glow-title a {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 1.2em;
+    }
+    summary.category-title {
+        font-size: 1.5rem;
+        padding: 12px 15px;
+    }
+    summary.category-title::before {
+        font-size: 0.7em;
+        margin-right: 8px;
+    }
+
+    .button-glow {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+    .button-glow img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .search-box {
+        padding: 15px;
+    }
+    .search-box input[type="text"] {
+        font-size: 0.9em;
+    }
+    .search-box button {
+        font-size: 1.1em;
+    }
+    .side-menu {
+        width: 180px; /* Even narrower for small screens */
+    }
+    .side-menu a {
+        padding: 12px 20px;
+    }
+}/* --- Styling for the Collapse Category Button --- */
+.collapse-category-button {
+    /* Basic Layout & Positioning */
+    display: block; /* Ensures it takes full width of its container to allow auto margins for centering */
+    margin: 30px auto 20px auto; /* Increased top margin for separation, auto for horizontal centering, more bottom margin */
+    width: fit-content; /* Shrink to fit content, but allow max-width */
+    max-width: 250px; /* Control max width for responsiveness */
+
+    /* Appearance - Matching the glowing theme */
+    padding: 12px 30px; /* Generous padding for a clickable area */
+    border: 3px solid #ff4d4d; /* Thicker, vibrant red border */
+    border-radius: 15px; /* More rounded corners */
+    background: linear-gradient(145deg, #150000, #080000); /* Dark, subtle red-black gradient for depth */
+    color: #fff5f5; /* Off-white text for contrast */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.05em; /* Slightly larger text */
+    letter-spacing: 0.05em; /* Add a little space between letters */
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Subtle text glow */
+
+    /* Shadows & Glows */
+    box-shadow: 0 0 12px rgba(255, 77, 77, 0.5), inset 0 0 8px rgba(255, 153, 153, 0.3); /* Initial red glow, with an inner shadow */
+
+    /* Transitions for interactivity */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother, more dynamic transition */
+
+    /* Cursor */
+    cursor: url('assets/hand.cur'), pointer; /* Custom hand cursor on hover */
+}
+
+.collapse-category-button:hover {
+    background: linear-gradient(145deg, #ff4d4d, #cc0000); /* More intense red gradient on hover */
+    color: #000000; /* Darker text for strong contrast on red */
+    box-shadow: 0 0 25px #ff4d4d, inset 0 0 20px #ff4d4d; /* Much stronger, encompassing glow */
+    transform: translateY(-5px) scale(1.02); /* Lift and slightly enlarge */
+    text-shadow: none; /* Remove text shadow when background is bright */
+}
+
+.collapse-category-button:active {
+    cursor: url('assets/click.cur'), pointer; /* Custom click cursor */
+    transform: translateY(-2px) scale(0.98); /* Slight press effect */
+    box-shadow: 0 0 10px #ff4d4d, inset 0 0 5px #ff4d4d; /* Reduced glow on click */
+}
+
+/* Responsive adjustments for the button (optional, but good practice) */
+@media (max-width: 768px) {
+    .collapse-category-button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+        margin: 25px auto 15px auto;
+        max-width: 200px; /* Keep it from getting too wide on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .collapse-category-button {
+        font-size: 0.8em;
+        padding: 8px 18px;
+        margin: 20px auto 10px auto;
+        max-width: 180px;
+    }
+}

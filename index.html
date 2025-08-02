@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SONIKRYPT</title>
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hamburger" onclick="toggleMenu()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<!-- Side menu options editing happens here -->
+<div class="side-menu" id="sideMenu">
+  <a href="aitools.html">Ai tools directory </a>
+  <a href="useful.html">Useful websites</a>
+  <a href="/krypttools/krypt.html">Tools by SONIKRYPT <span class="coming-soon">Coming soon⌚</span></a>
+  <a href="aboutus.html">About us</a>
+</div>
+  <canvas id="bg"></canvas>
+
+  <a id="top"></a>
+
+  <div class="top-bar">
+    
+</div>
+  <h1 class="glow-title"><a href="aboutus.html" target="_blank">SONIKRYPT</a></h1>
+</div>
+<h2 class="section-title subtitle">USEFUL WEBSITES AND AI TOOLS DIRECTORY</h2>
+
+<!-- Add glowing divider below -->
+<div class="divider"></div>
+
+  <div class="search-box-container">
+    <div class="search-box">
+      <div class="row">
+        <input type="text" id="input-box" placeholder="Search AI tools and websites..." autocomplete="off">
+        <!-- The onclick events here will be handled by script.js after it's loaded -->
+        <button onclick="clearSearchAndSuggestions()" class="clear-button">❌</button>
+        <button onclick="searchTools()" class="search-button">🔍</button>
+      </div>
+      <ul id="suggestion-box" class="dropdown"></ul>
+      <div id="not-found-message" class="not-found-message">❌ TOOL NOT FOUND ❌</div>
+    </div>
+  </div>
+
+  <h2 class="section-title popular-tools-heading subtitle">🔥POPULAR AI TOOLS AND WEBSITES🔥</h2>
+
+
+  <!-- This is the container where all the category sections will be dynamically injected by script.js -->
+  <div id="dynamic-content-area"></div>
+
+  <div class="bottom-bar">
+    <span>
+      <a href="aboutus.html" class="button-glow">ABOUT US</a>
+    </span>
+    <span>
+      <a href="#top" class="button-glow">TOP</a>
+    </span>
+  </div>
+  <script src="dynamicarea.js"></script>
+  <script src="script.js"></script>
+  <script src="particles.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SONIKRYPT</title>
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="usefultool.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <div class="fade-in">
+  <div class="hamburger" onclick="toggleMenu()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<!-- Side menu options editing happens here -->
+<div class="side-menu" id="sideMenu">
+  <a href="index.html">Home</a>
+  <a href="aitools.html">Ai tools directory</a>
+  <a href="/krypttools/krypt.html">Tools by SONIKRYPT <span class="coming-soon">Coming soon⌚</span></a>
+  <a href="aboutus.html">About us</a>
+  
+</div>
+  <canvas id="bg"></canvas>
+
+  <a id="top"></a>
+
+  <div class="top-bar">
+    
+
+<h2 class="section-title popular-tools-heading subtitle">USEFUL WEBSITES</h2>
+
+<!-- Add glowing divider below -->
+<div class="divider"></div>
+
+  <div class="search-box-container">
+    <div class="search-box">
+      <div class="row">
+        <input type="text" id="input-box" placeholder="Search AI tools" autocomplete="off">
+        <!-- The onclick events here will be handled by script.js after it's loaded -->
+        <button onclick="clearSearchAndSuggestions()" class="clear-button">❌</button>
+        <button onclick="searchTools()" class="search-button">🔍</button>
+      </div>
+      <ul id="suggestion-box" class="dropdown"></ul>
+      <div id="not-found-message" class="not-found-message">❌ WEBSITE NOT FOUND ❌</div>
+    </div>
+  </div>
+
+  
+
+
+  <!-- This is the container where all the category sections will be dynamically injected by script.js -->
+<section class="ai-tools-section" id="aitool">
+  <!-- JavaScript will dynamically inject collapsible categories here -->
+</section>
+
+  <div class="bottom-bar">
+    <span>
+      <a href="#top" class="button-glow">TOP</a>
+    </span>
+  </div>
+
+  
+  <script src="usefultool.js"></script>
+  <script src="usefullist.js"></script>
+  <script src="particles.js"></script>
+  </div>
+</body>
+
+</html>

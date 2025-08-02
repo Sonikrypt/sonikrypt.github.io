@@ -1,0 +1,466 @@
+/* another.css - Final Refined Version for SoniKrypt About Us */
+
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0d0000, #1a0000, #100000);
+  color: #ffecec;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+h1, h2, h3 {
+  color: #fff5f5;
+  text-shadow: 0 0 5px #ff4d4d, 0 0 10px #ff1a1a;
+  text-align: center;
+}
+
+.top-bar, .bottom-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.top-bar h1 {
+  margin: 1;
+  pointer-events: none;
+  user-select: none;
+  font-size: 2.2em;
+  animation: slideFromTop 1s ease-out both;
+}
+
+@keyframes slideFromTop {
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+a {
+  color: #ff4d4d;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: #ffc1c1;
+  text-shadow: 0 0 6px #ff4d4d;
+}
+
+p, ul {
+  font-size: 1.3em;
+  line-height: 1.7;
+  animation: fadeIn 2s ease both;
+  max-width: 900px;
+  text-align: justify;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li::before {
+  content: "🔥";
+  margin-right: 10px;
+  color: gold;
+  animation: pulse 2s infinite;
+}
+
+li {
+  margin-bottom: 10px;
+  animation: fadeInUp 1.2s ease both;
+}
+
+h2 {
+  margin-top: 50px;
+  font-size: 2em;
+  color: #fff0f0;
+  padding-bottom: 5px;
+  text-align: center;
+  /* Removed border-bottom */
+}
+
+.button-glow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 2px solid #ff4d4d;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff5f5;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 6px #ff4d4d, inset 0 0 6px #ff9999;
+  font-size: 1em;
+  min-width: 200px;
+}
+
+.button-glow:hover {
+  background: #ff4d4d;
+  color: #1a0000;
+  box-shadow: 0 0 12px #ff4d4d, inset 0 0 12px #ff4d4d;
+}
+
+.button-glow img {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  p, li {
+    font-size: 1.1em;
+  }
+
+  .top-bar, .bottom-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-glow {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+body {
+  cursor: url('assets/cursor.cur'), auto;
+}
+
+
+a.button-glow {
+  cursor: url('assets/hand.cur'), pointer;
+}
+
+
+a.button-glow:active {
+  cursor: url('assets/click.cur'), pointer;
+}
+a.clickable {
+  cursor: url('assets/hand.cur'), pointer;
+}
+a.clickable:active{
+  cursor: url('assets/click.cur'), pointer;
+}
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+    align-items: center;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .top-bar h1 {
+    font-size: 1.8em;
+  }
+
+  p, li {
+    font-size: 1em;
+    text-align: left;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+  .top-bar, .bottom-bar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2em;
+  }
+
+  .button-glow {
+    width: 90%;
+    max-width: 320px;
+    font-size: 1em;
+    padding: 12px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .button-glow img {
+    width: 20px;
+    height: 20px;
+  }
+
+  span {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .button-glow {
+  width: 90%;
+  max-width: 320px;
+  font-size: 1em;
+  padding: 12px;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.button-glow img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+}
+.button-glow {
+  box-sizing: border-box;
+}
+/* HAMBURGER ICON */
+.hamburger {
+  position: fixed;
+  top: 60px;
+  left: 30px;
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1001;
+}
+.hamburger div {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+/* SIDE MENU */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  height: 100vh;
+  width: 250px;
+  background-color: #111;
+  color: #fff;
+  padding-top: 100px;
+  transition: left 0.4s ease;
+  z-index: 1000;
+}
+.side-menu a {
+  display: block;
+  padding: 15px 25px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  border-bottom: 1px solid #333;
+  transition: background 0.3s ease;
+}
+.side-menu a:hover {
+  background-color: #222;
+}
+.side-menu.open {
+  left: 0;
+}
+/* HAMBURGER ICON */
+.hamburger {
+  cursor: url('assets/hand.cur'), pointer;
+}
+.hamburger:active {
+  cursor: url('assets/click.cur'), pointer;
+}
+
+/* EACH LINE OF HAMBURGER */
+.hamburger div {
+  cursor: url('assets/hand.cur'), pointer;
+}
+
+/* SIDE MENU LINKS */
+.side-menu a {
+  cursor: url('assets/hand.cur'), pointer;
+}
+.side-menu a:active {
+  cursor: url('assets/click.cur'), pointer;
+}
+.side-menu a .coming-soon {
+  display: block;
+  font-size: 0.9em;
+  color: #ffb3b3;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    top: 40px;
+    left: 15px;
+    width: 28px;
+    height: 22px;
+    position: fixed;
+    z-index: 9999; /* Ensure it's on top */
+    transition: opacity 0.3s ease;
+    
+  }
+
+  .hamburger div {
+    height: 3px;
+  }
+
+  .side-menu {
+    width: 220px;
+    padding-top: 80px;
+  }
+}
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 220px;
+  height: 100%;
+  background: #111;
+  transition: left 0.3s ease;
+  z-index: 9998;
+}
+
+.side-menu.open {
+  left: 0;
+}
+.hamburger {
+    position: fixed;
+    top: 60px;
+    left: 30px;
+    width: 35px; /* Slightly larger */
+    height: 30px; /* Slightly larger */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: url('assets/hand.cur'), pointer;
+    z-index: 1001;
+}
+
+.hamburger:active {
+    cursor: url('assets/click.cur'), pointer;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 5px; /* Thicker lines */
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border-radius: 2px; /* Slightly rounded lines */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle glow for lines */
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translateY(12px); /* Adjusted for thicker lines */
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translateY(-12px); /* Adjusted for thicker lines */
+}
+
+/* Side Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -280px; /* Adjusted to hide better */
+    width: 270px; /* Wider menu */
+    height: 100vh;
+    background: linear-gradient(180deg, #180000, #0a0000); /* Darker, more intense gradient */
+    color: #fff;
+    padding-top: 120px; /* More space from top */
+    transition: left 0.4s ease;
+    z-index: 1000;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.8); /* Shadow on open edge */
+}
+
+.side-menu a {
+    display: block;
+    padding: 18px 30px; /* More padding */
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    border-bottom: 1px solid #3d0000; /* Stronger border */
+    transition: background 0.3s ease, color 0.3s ease;
+    font-size: 1.1em; /* Slightly larger font */
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+    cursor: url('assets/hand.cur'), pointer;
+}
+
+.side-menu a:hover {
+    background-color: #350000; /* Darker red on hover */
+    color: #ffcccc; /* Lighter text on hover */
+    padding-left: 35px; /* Indent on hover */
+}
+
+.side-menu a:active {
+    cursor: url('assets/click.cur'), pointer;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu a .coming-soon {
+    display: block;
+    font-size: 0.8em; /* Slightly smaller for 'coming soon' */
+    color: #ff8080; /* Brighter red */
+    margin-top: 5px;
+    font-style: italic;
+    opacity: 0.8;
+}
+

@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 30px; /* Corrected to a valid CSS unit */
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #0d0000, #1a0000, #100000);
+    color: #000000ff;
+    /*
+      The following lines are removed to prevent vertical centering.
+      The title will now appear at the top of the page by default.
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    */
+    height: 100vh;
+    cursor: url('/assets/cursor.cur'), pointer;
+}
+
+.background {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -4;
+   
+}
+.glow-title {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 8px #000000ff,
+        0 0 16px #ff4d4d,
+        0 0 32px #000000ff,
+        0 0 64px #000000ff;
+    animation: pulseGlow 4s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0% {
+        text-shadow:
+            0 0 8px #ff4d4d,
+            0 0 16px #ff4d4d,
+            0 0 32px #ff0000,
+            0 0 64px #ff0000;
+    }
+    100% {
+        text-shadow:
+            0 0 16px #ff9999,
+            0 0 32px #ff9999,
+            0 0 48px #ff6666,
+            0 0 96px #ff3333;
+    }
+}
+
+
+
+/* --- Hamburger Menu --- */
+.hamburger {
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: url('/assets/hand.cur'), pointer; /* ✅ FIXED PATH */
+    z-index: 1001;
+}
+
+.hamburger:active {
+    cursor: url('/assets/click.cur'), pointer; /* ✅ FIXED PATH */
+}
+
+.hamburger div {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* --- Active hamburger --- */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translateY(12px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translateY(-12px);
+}
+
+/* --- Side Menu --- */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 220px;
+    height: 100vh;
+    background: linear-gradient(180deg, #180000, #0a0000);
+    color: #fff;
+    padding-top: 80px;
+    transition: left 0.4s ease;
+    z-index: 1000;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu a {
+    display: block;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    border-bottom: 1px solid #3d0000;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-size: 1em;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+    cursor: url('/assets/hand.cur'), pointer;
+}
+
+.side-menu a:hover {
+    background-color: #350000;
+    color: #ffcccc;
+    padding-left: 35px;
+}
+
+.side-menu a:active {
+    cursor: url('/assets/click.cur'), pointer;
+}
+
+.side-menu a .coming-soon {
+    display: block;
+    font-size: 0.8em;
+    color: #ff8080;
+    margin-top: 5px;
+    font-style: italic;
+    opacity: 0.8;
+}
