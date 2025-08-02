@@ -381,7 +381,7 @@ const categoriesData = [
             {
                 name: "Bolt AI",
                 description: "A fast and intuitive AI workspace inside macOS that connects all your tools, apps, and tasks with natural language.",
-                url: "https://boltai.co"
+                url: "https://bolt.new/"
             },
             {
                 name: "Wix",
