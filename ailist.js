@@ -6,7 +6,7 @@ const cateTool = [
       { name: "Gemini", description: "AI chatbot by Google.", url: "https://gemini.google.com/" },
       { name: "Bing Chat (Microsoft Copilot)", description: "AI assistant built into Microsoft 365 apps and Windows.", url: "https://copilot.microsoft.com/" },
       { name: "Perplexity AI", description: "AI-powered search engine with citations.", url: "https://www.perplexity.ai/" },
-      { name: "Claude 3", description: "Anthropic’s helpful AI assistant, great for writing and reasoning.", url: "https://claude.ai/" },
+      { name: "Claude 3", description: "Anthropic's helpful AI assistant, great for writing and reasoning.", url: "https://claude.ai/" },
       { name: "You.com", description: "AI search engine and assistant with productivity tools.", url: "https://you.com/" },
       { name: "DeepSeek", description: "Chinese open-source AI assistant with multilingual support.", url: "https://deepseek.com/" },
       { name: "Character AI", description: "Conversational AI bots with personalities.", url: "https://beta.character.ai/" },
@@ -20,7 +20,10 @@ const cateTool = [
       { name: "Phind", description: "AI search engine for developers.", url: "https://www.phind.com/" },
       { name: "Talk to Books by Google", description: "Explore ideas and discover books through conversation.", url: "https://books.google.com/talktobooks/" },
       { name: "Bardeen AI", description: "AI automation for workflows.", url: "https://www.bardeen.ai/" },
-      { name: "Eightify", description: "AI-powered YouTube video summarizer.", url: "https://eightify.app/" }
+      { name: "Eightify", description: "AI-powered YouTube video summarizer.", url: "https://eightify.app/" },
+      { name: "Grok", description: "AI assistant by xAI with real-time knowledge and a rebellious personality.", url: "https://grok.x.ai/" },
+      { name: "Devin", description: "The first AI software engineer, capable of complex coding tasks.", url: "https://www.cognition.ai/blog/introducing-devin" },
+      { name: "Cline", description: "An AI assistant that acts as a full-stack software engineer in your terminal.", url: "https://cline.bot/" }
     ]
   },
   {
@@ -53,13 +56,16 @@ const cateTool = [
       { name: "Outranking", description: "AI-powered content creation and optimization platform.", url: "https://www.outranking.io/" },
       { name: "ParagraphAI", description: "AI writing assistant for email, articles, and more.", url: "https://paragraphai.com/" },
       { name: "ContentBot.ai", description: "AI writer for blog posts, ads, and marketing copy.", url: "https://contentbot.ai/" },
-      { name: "Sapling.ai", description: "AI assistant for business communication.", url: "https://sapling.ai/" }
+      { name: "Sapling.ai", description: "AI assistant for business communication.", url: "https://sapling.ai/" },
+      { name: "ChatGPT-4o", description: "OpenAI's latest model with improved speed and capabilities for text, voice, and vision.", url: "https://openai.com/index/hello-gpt-4o/" },
+      { name: "Claude 3.5 Sonnet", description: "Anthropic's latest model, offering superior reasoning and coding capabilities.", url: "https://www.anthropic.com/news/claude-3-5-sonnet" },
+      { name: "KoalaWriter", description: "AI writer that creates SEO-optimized articles using real-time search data.", url: "https://koala.sh/" }
     ]
   },
   {
     title: "Image Generation",
     tools: [
-      { name: "DALL·E 3", description: "OpenAI’s image generation from text prompts.", url: "https://openai.com/dall-e" },
+      { name: "DALL·E 3", description: "OpenAI's image generation from text prompts.", url: "https://openai.com/dall-e" },
       { name: "Midjourney", description: "AI tool that creates art from text prompts.", url: "https://www.midjourney.com/" },
       { name: "Leonardo AI", description: "Fast-growing creative AI for high-quality images.", url: "https://leonardo.ai/" },
       { name: "Playground AI", description: "Free AI image generator for casual and commercial use.", url: "https://playgroundai.com/" },
@@ -76,7 +82,11 @@ const cateTool = [
       { name: "Fotor AI Image Generator", description: "Online AI image generator and photo editor.", url: "https://www.fotor.com/features/ai-image-generator/" },
       { name: "Canva Text to Image", description: "Integrated AI image generator within Canva.", url: "https://www.canva.com/features/ai-image-generator/" },
       { name: "Getimg.ai", description: "Suite of AI tools for image generation and editing.", url: "https://getimg.ai/" },
-      { name: "Facetune AI", description: "AI photo editor for selfies and portraits.", url: "https://www.facetuneapp.com/" }
+      { name: "Facetune AI", description: "AI photo editor for selfies and portraits.", url: "https://www.facetuneapp.com/" },
+      { name: "Stable Diffusion 3", description: "Latest generation of the open-source image model with improved prompt following.", url: "https://stability.ai/news/stable-diffusion-3" },
+      { name: "Midjourney v6", description: "The latest alpha version with significantly improved realism and prompt understanding.", url: "https://www.midjourney.com/" },
+      { name: "Flux", description: "A new leading open-source model for image generation, rivaling SD3 and DALL-E 3.", url: "https://black-forest-labs.com/01-ai/" },
+      { name: "Ideogram", description: "AI image generator known for its superior ability to render legible text within images.", url: "https://ideogram.ai/" }
     ]
   },
   {
@@ -101,7 +111,11 @@ const cateTool = [
       { name: "Veed.io", description: "Online video editor with AI features like subtitles.", url: "https://www.veed.io/" },
       { name: "CapCut AI", description: "Free video editing app with AI features for mobile.", url: "https://www.capcut.com/" },
       { name: "Simplified Video Editor", description: "AI-powered video creation and editing.", url: "https://simplified.com/video-editor/" },
-      { name: "Raw Shorts", description: "AI video maker for animated explainers and marketing videos.", url: "https://www.rawshorts.com/" }
+      { name: "Raw Shorts", description: "AI video maker for animated explainers and marketing videos.", url: "https://www.rawshorts.com/" },
+      { name: "Sora", description: "OpenAI's revolutionary text-to-video model creating highly realistic and imaginative scenes.", url: "https://openai.com/sora" },
+      { name: "Kling AI", description: "A powerful text-to-video model from China, demonstrating strong realistic video generation.", url: "https://www.klingai.com/" },
+      { name: "LTX Studio", description: "An AI-powered platform for generating and editing entire films from a text prompt.", url: "https://www.lightricks.com/ltx-studio" },
+      { name: "Captions", description: "AI-powered video creation app with features like eye contact correction and auto-editing.", url: "https://www.captions.ai/" }
     ]
   },
   {
@@ -123,7 +137,9 @@ const cateTool = [
       { name: "Play.ht", description: "AI voice generator and realistic text to speech.", url: "https://play.ht/" },
       { name: "Voicify AI", description: "AI voice creation for various applications.", url: "https://voicify.ai/" },
       { name: "Riffusion", description: "Real-time music generation with AI.", url: "https://www.riffusion.com/" },
-      { name: "TuneFlow", description: "AI-powered music co-creation platform.", url: "https://www.tuneflow.com/" }
+      { name: "TuneFlow", description: "AI-powered music co-creation platform.", url: "https://www.tuneflow.com/" },
+      { name: "Sunno V3", description: "Latest version of the popular AI song generator with improved audio quality and style.", url: "https://suno.com/" },
+      { name: "OpenAI Voice Engine", description: "A model for generating custom, emotive speech from a text input and a short audio sample.", url: "https://openai.com/index/navigating-the-challenges-and-opportunities-of-synthetic-voices/" }
     ]
   },
   {
@@ -148,7 +164,10 @@ const cateTool = [
       { name: "Azure Machine Learning", description: "Cloud-based service for machine learning lifecycle.", url: "https://azure.microsoft.com/en-us/products/machine-learning" },
       { name: "Amazon SageMaker", description: "Fully managed machine learning service.", url: "https://aws.amazon.com/sagemaker/" },
       { name: "DataRobot", description: "Automated machine learning platform.", url: "https://www.datarobot.com/" },
-      { name: "Domino Data Lab", description: "Data science platform for enterprise.", url: "https://www.dominodatalab.com/" }
+      { name: "Domino Data Lab", description: "Data science platform for enterprise.", url: "https://www.dominodatalab.com/" },
+      { name: "vLLM", description: "A high-throughput and memory-efficient inference and serving engine for LLMs.", url: "https://github.com/vllm-project/vllm" },
+      { name: "LM Studio", description: "A user-friendly desktop app to discover, download, and run local LLMs.", url: "https://lmstudio.ai/" },
+      { name: "Cline", description: "An AI assistant that acts as a full-stack software engineer in your terminal.", url: "https://cline.bot/" }
     ]
   },
   {
@@ -173,7 +192,10 @@ const cateTool = [
       { name: "Formulas by Google Sheets", description: "AI-powered formula suggestions in Google Sheets.", url: "https://support.google.com/docs/answer/10321453" },
       { name: "XLookup by Microsoft Excel", description: "Advanced lookup function with AI enhancements.", url: "https://support.microsoft.com/en-us/office/xlookup-function-f538eec3-6d09-4185-bc95-8d59fd1e75a9" },
       { name: "DocuSign AI", description: "AI for contract analysis and agreement management.", url: "https://www.docusign.com/solutions/ai" },
-      { name: "Salesforce Einstein", description: "AI for CRM to enhance sales, service, and marketing.", url: "https://www.salesforce.com/products/einstein/" }
+      { name: "Salesforce Einstein", description: "AI for CRM to enhance sales, service, and marketing.", url: "https://www.salesforce.com/products/einstein/" },
+      { name: "Notion Q&A", description: "An AI-powered search and answer tool within Notion that queries all your workspace content.", url: "https://www.notion.so/product/ai" },
+      { name: "Microsoft 365 Copilot", description: "AI assistant integrated across Word, Excel, PowerPoint, Outlook, and Teams.", url: "https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/16/introducing-microsoft-365-copilot/" },
+      { name: "Google Gemini in Workspace", description: "AI features integrated into Google Docs, Sheets, Slides, and Gmail.", url: "https://workspace.google.com/solutions/ai/" }
     ]
   },
   {
@@ -198,7 +220,10 @@ const cateTool = [
       { name: "IconifyAI", description: "Generate app icons with AI.", url: "https://iconifyai.com/" },
       { name: "Diagrams.net AI", description: "AI assistance for creating diagrams.", url: "https://www.diagrams.net/" },
       { name: "Looka", description: "AI-powered logo maker and brand identity design.", url: "https://looka.com/" },
-      { name: "Fontjoy", description: "AI font pairing generator.", url: "https://fontjoy.com/" }
+      { name: "Fontjoy", description: "AI font pairing generator.", url: "https://fontjoy.com/" },
+      { name: "Figma AI", description: "Native AI features within Figma for content generation, summarization, and more.", url: "https://www.figma.com/ai" },
+      { name: "Arc browser", description: "A browser with built-in AI features like link previews and automatic tab renaming.", url: "https://arc.net/" },
+      { name: "Galileo AI", description: "Generates UI designs from a text description, integrating with Figma.", url: "https://www.usegalileo.ai/" }
     ]
   },
   {
@@ -223,7 +248,12 @@ const cateTool = [
       { name: "Bubble", description: "No-code platform to build web applications with AI plugins.", url: "https://bubble.io/" },
       { name: "Webflow AI", description: "AI features integrated into Webflow for web design and development.", url: "https://webflow.com/ai" },
       { name: "Vercel AI SDK", description: "Tools for building AI-powered applications with Next.js.", url: "https://sdk.vercel.ai/" },
-      { name: "Bolt AI", description: "AI-powered web app builder.", url: "https://bolt.new/" }
+      { name: "Bolt AI", description: "AI-powered web app builder.", url: "https://bolt.new/" },
+      { name: "GitHub Copilot Workspace", description: "A native AI-powered environment for brainstorming, planning, and building software.", url: "https://githubnext.com/projects/copilot-workspace" },
+      { name: "Codiumate", description: "AI agent that interacts with your codebase to help with PR reviews and code changes.", url: "https://www.codium.ai/" },
+      { name: "Windsurf", description: "A modern IDE built around AI, designed to work with tools like GPT Engineer.", url: "https://www.windsurf.ai/" },
+      { name: "Cursor", description: "The AI-first code editor built for pair programming with an AI agent.", url: "https://www.cursor.com/" },
+      { name: "Bolt.new", description: "AI-powered tool to quickly build and deploy web applications.", url: "https://bolt.new/" }
     ]
   }
 ];
